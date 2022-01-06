@@ -8,4 +8,3 @@
  */
 
 rootProject.name = 'jfactory-repo-elastic-search'
-include('lib')
