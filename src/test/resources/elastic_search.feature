@@ -34,3 +34,14 @@ Feature: Elastic Search Data Repository
     size=1
     """
 
+  Scenario: Es data should be
+    Given Exists es data "Index":
+      | id      | someString  | someInt | someBoolean |
+      | idValue | stringValue | 101     | true        |
+    Then Es data "Index.id[idValue]" should be:
+    """
+      someString='stringValue'
+      someInt=101,
+      someBoolean=true
+    """
+

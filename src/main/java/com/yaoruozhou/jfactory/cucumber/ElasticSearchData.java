@@ -27,4 +27,9 @@ public class ElasticSearchData {
     public void existsEsData(int number, String index) {
         jData.prepare(number, index);
     }
+
+    @Then("Es data {string} should be:")
+    public void esDataShouldBe(String queryExpression, String dalExpression) {
+        jData.should(queryExpression, dalExpression);
+    }
 }
