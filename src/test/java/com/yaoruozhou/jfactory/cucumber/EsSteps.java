@@ -2,6 +2,7 @@ package com.yaoruozhou.jfactory.cucumber;
 
 import com.github.leeonky.jfactory.JFactory;
 import com.yaoruozhou.jfactory.cucumber.indexes.Index;
+import com.yaoruozhou.jfactory.cucumber.indexes.IndexWithChild;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class EsSteps {
     @Before
     public void cleanUp() {
         elasticsearchOperations.indexOps(Index.class).delete();
+        elasticsearchOperations.indexOps(IndexWithChild.class).delete();
     }
 
 }

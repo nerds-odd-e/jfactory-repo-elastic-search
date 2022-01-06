@@ -45,3 +45,13 @@ Feature: Elastic Search Data Repository
       someBoolean=true
     """
 
+  Scenario: Exists es data with child object
+    Given Exists es data "IndexWithChild":
+    """
+    child:
+      yaString: childString
+    """
+    Then All es data "IndexWithChild" should be:
+    """
+    [0].child.yaString='childString'
+    """
