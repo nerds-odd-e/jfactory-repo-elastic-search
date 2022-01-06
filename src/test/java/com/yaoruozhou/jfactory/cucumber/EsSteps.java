@@ -1,5 +1,6 @@
 package com.yaoruozhou.jfactory.cucumber;
 
+import com.github.leeonky.jfactory.JFactory;
 import com.yaoruozhou.jfactory.cucumber.indexes.Index;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
@@ -14,6 +15,9 @@ public class EsSteps {
 
     @Autowired
     private ElasticsearchOperations elasticsearchOperations;
+
+    @Autowired
+    JFactory jFactory;
 
     @Before
     public void cleanUp() {

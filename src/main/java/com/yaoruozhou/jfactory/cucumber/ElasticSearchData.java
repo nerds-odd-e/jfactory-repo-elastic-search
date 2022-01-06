@@ -22,4 +22,9 @@ public class ElasticSearchData {
     public void allEsDataShouldBe(String queryExpression, String dalExpression) {
         jData.allShould(queryExpression, dalExpression);
     }
+
+    @Given("Exists {int} es data {string}:")
+    public void existsEsData(int number, String index) {
+        jData.prepare(number, index);
+    }
 }
