@@ -6,8 +6,11 @@ Feature: Elastic Search Data Repository
       | stringValue | 101     | true        |
     Then All es data "Index" should be:
     """
-      someString= "stringValue"
-      someInt= 101,
-      someBoolean= true
+    [0]: {
+      someString='stringValue'
+      someInt=101,
+      someBoolean=true
+    }
+    size=1
     """
 
