@@ -1,8 +1,8 @@
 package com.yaoruozhou.jfactory.cucumber;
 
 import com.github.leeonky.jfactory.cucumber.JData;
-import io.cucumber.java.en.Given;
 import com.github.leeonky.jfactory.cucumber.Table;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class ElasticSearchData {

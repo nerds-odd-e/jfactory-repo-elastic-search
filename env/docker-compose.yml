@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.16.2
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - http.cors.enabled=true
+      - http.cors.allow-origin=/.*/
+
+  elasticvue:
+    image: cars10/elasticvue
+    ports:
+      - "18080:8080"
